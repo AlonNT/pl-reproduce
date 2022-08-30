@@ -1,0 +1,9 @@
+*__pycache__*
+.idea/
+.vscode/
+data/
+experiments/
+wandb/
+artifacts/
+plots/.ipynb_checkpoints/
+.DS_Store
