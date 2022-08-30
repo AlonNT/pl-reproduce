@@ -6,8 +6,6 @@ The model that is used for training is similar to ResNet18 but has no residual c
 
 ## How To Run
 
-Create 3 different conda environments, where the only difference is the PyTorch Lightning version:
-
 1. Create 3 different conda environments, where the only difference between them is PyTorch Lightning version:
 ```shell
 conda env create -f environment-lightning-1-5-4.yml
