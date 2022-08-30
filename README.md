@@ -4,6 +4,10 @@ This repository enables re-producing an issue while training on ImageNet using P
 The issue is getting different performance (i.e., train/validation accuracy) when using different versions of PyTorch Lightning.  
 The model that is used for training is similar to ResNet18 but has no residual connections.
 
+## WandB Project
+
+Check the [wandb project](https://wandb.ai/alonnt/pl-reproduce) for the more details (e.g., learning curves).
+
 ## How To Run
 
 1. Create 3 different conda environments, where the only difference between them is PyTorch Lightning version:
