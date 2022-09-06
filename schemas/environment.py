@@ -34,6 +34,10 @@ class EnvironmentArgs(ImmutableArgs):
     #: (for example if the model is extremely large and we ran out of storage in our W&B account).
     enable_checkpointing: bool = False
 
+    #: If this is not None, will use PyTorch Lightning seed_everything 
+    #: with this seed, to enable reproducibility.
+    seed: Optional[int] = None
+
     @validator('path', pre=True)
     def create_parent_out_dir_if_not_exists(cls, v: str):
         if not Path(v).exists():

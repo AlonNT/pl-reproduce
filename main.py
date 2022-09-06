@@ -1,3 +1,4 @@
+from pytorch_lightning import seed_everything
 from schemas.main import Args
 from utils import (configure_logger,
                    get_args,
@@ -13,6 +14,9 @@ def main():
     args = get_args(args_class=Args)
     configure_logger(args.env.path, level='DEBUG')
     log_args(args)
+
+    if args.env.seed is not None:
+        seed_everything(args.env.seed, workers=True)
 
     datamodule = initialize_datamodule(args.data, args.opt.batch_size)
     wandb_logger = initialize_wandb_logger(args)
